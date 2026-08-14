@@ -15,8 +15,15 @@ const app = express()
 
 // 2. sencond approch to conncet DB
 connectDB()
-
-
+.then( () => {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(` Server is Running at port : 
+            ${process.env.PORT}`)
+    })
+})
+.catch((err) => {
+    console.log("MONGO db connection failed !!!", err)
+})
 
 
 
