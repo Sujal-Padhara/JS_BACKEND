@@ -10,7 +10,7 @@ import { DB_NAME } from "./constants.js";
 
 import express from "express"
 import connectDB from "./db/index.js";
-const app = express()
+import  { app } from "./app.js"
 
 
 // 2. sencond approch to conncet DB
